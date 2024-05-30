@@ -114,7 +114,7 @@ export class ProductsComponent implements OnInit {
                 let monto: any = 0;
                 if (el.pro_grabaiva) {
                   monto = p.monto;
-                  monto = monto * 1.12;
+                  monto = monto * 1.15;
                   p.monto = parseFloat(monto).toFixed(2);
                 }
               // }
@@ -153,11 +153,11 @@ export class ProductsComponent implements OnInit {
         //   data: 'pro_id',
         //   orderable: true,
         // },
-        // {
-        //   title: 'Caja id',
-        //   data: 'caja_id',
-        //   orderable: true,
-        // },
+        {
+          title: 'Caja id',
+          data: 'caja_id',
+          orderable: true,
+        },
         {
           title: 'Nombre',
           data: null,
@@ -206,7 +206,7 @@ export class ProductsComponent implements OnInit {
           render: (data, type, full) => {
             if (data.pro_grabaiva) {
               var price =
-                parseFloat(data.pro_precioventa) * 0.12 +
+                parseFloat(data.pro_precioventa) * 0.15 +
                 parseFloat(data.pro_precioventa);
               return `<div style="min-width:80px"> ${this.decimalP.transform(
                 price,

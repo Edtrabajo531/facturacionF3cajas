@@ -627,7 +627,7 @@ export class BillingComponent implements OnInit {
 
       if (data.pro_grabaiva == '1') {
         let price =
-          Number(data.pro_precioventa) + Number(data.pro_precioventa) * 0.12;
+          Number(data.pro_precioventa) + Number(data.pro_precioventa) * 0.15;
         data.pro_precioventa = this.DecimalP.transform(price, '1.2-4');
       } else {
         data.pro_precioventa = this.DecimalP.transform(
@@ -678,7 +678,7 @@ export class BillingComponent implements OnInit {
         pro.pro_precioventa,
         '1.2-4'
       );
-      pro.totalsiniva_nodesc = pro.cantidad * (pro_precioventa / 1.12);
+      pro.totalsiniva_nodesc = pro.cantidad * (pro_precioventa / 1.15);
 
       if (this.applyDiscountG) {
         if (this.resetDiscount) {
@@ -702,9 +702,9 @@ export class BillingComponent implements OnInit {
       // pro.totalNodesc = (pro.cantidad * pro_precioventa) - porcentajeiva;
 
       // pro.totalsiniva = ((pro.cantidad * pro_precioventa) - pro.descmonto) - (((pro.cantidad * pro_precioventa) - pro.descmonto) * 0.12);
-      pro.totalsiniva = pro.cantidad * (pro_precioventa / 1.12) - pro.descmonto;
+      pro.totalsiniva = pro.cantidad * (pro_precioventa / 1.15) - pro.descmonto;
 
-      pro.total = pro.totalsiniva * 1.12;
+      pro.total = pro.totalsiniva * 1.15;
 
       // } else {
       //   pro.descsubtotal = (pro.cantidad * pro_precioventa);

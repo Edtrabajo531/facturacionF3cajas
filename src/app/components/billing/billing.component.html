@@ -492,7 +492,7 @@ total -->
                       <th colspan="5" style="border: none"></th>
                       <th style="border: none">IVA:</th>
                       <th style="border: none" colspan="2">
-                        {{ totalsinniva * 0.12 | number : "0.2-2" }} $
+                        {{ totalsinniva * 0.15 | number : "0.2-2" }} $
                       </th>
                     </tr>
                     <tr *ngIf="products.length != 0">
@@ -844,17 +844,15 @@ total -->
     style="width: 300px; padding: 40px 5px 40px 5px; background: white"
     id="ticket"
   >
-    <h6 style="margin: " class="text-center">
-      {{ invoicePrint.empresa1.nom_emp }}
-    </h6>
+    <h6 class="text-center">MAXIMARKET</h6>
 
-    <h6 *ngIf="caja_id == 10" style="margin: " class="text-center">
+    <!-- <h6 *ngIf="caja_id == 10" style="margin: " class="text-center">
       EL MUNDO DEL EMPAQUE
     </h6>
 
     <h6 *ngIf="caja_id == 1" style="margin: " class="text-center">
       LA CASA DEL EMPAQUE
-    </h6>
+    </h6> -->
 
     <p *ngIf="invoicePrint.empresa1.ruc_emp" style="margin: 0">
       <strong> RUC: </strong> {{ invoicePrint.empresa1.ruc_emp }}
@@ -918,19 +916,12 @@ total -->
         <td>{{ prod.total | number : "0.2-2" }}</td>
       </tr>
     </table>
-    
-    
-    
-
-
-
-
 
     <div style="width: 100%; padding-right: 12px">
       <table style="width: 100%; margin-right: 12px">
         <tr>
           <th style="text-align: right"></th>
-          <th style="text-align: right">SUBTOTAL IVA 12%:</th>
+          <th style="text-align: right">SUBTOTAL IVA 15%:</th>
           <td style="text-align: right">
             {{ invoicePrint.subtotaliva12 | number : "0.2-2" }}
           </td>
